@@ -701,13 +701,15 @@ a {
   }
   .header__menu {
     gap: 10px;
+    margin-left: 4px;
   }
   .header__menu-item span, .header__menu-item a {
     font-size: 14px;
   }
   .header__number {
     font-size: 16px;
-    padding-left: 0;
+    padding-right: 20px;
+    margin-left: auto;
   }
   .header__btn {
     width: 150px;
@@ -718,6 +720,13 @@ a {
   }
   .header__logo img {
     width: 100%;
+  }
+}
+@media (max-width: 1149px) {
+  .header__number {
+    font-size: 14px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 @media (max-width: 1079px) {
@@ -815,6 +824,10 @@ a {
   margin-bottom: 22px;
   font-size: 24px;
   font-weight: 600;
+  transition: color 0.2s ease-in;
+}
+.burger-menu__number:hover, .burger-menu__number:active {
+  color: #EBD39B;
 }
 
 .detective-agency {
@@ -2153,6 +2166,9 @@ a {
   font: 16px "Montserrat-SemiBold";
   margin-bottom: 16px;
   color: #fff;
+}
+.footer__column-item_title:hover {
+  color: #fff !important;
 }
 .footer__column-item:hover {
   color: #E7CE95;
