@@ -1882,11 +1882,12 @@ a {
 
 	&__slider-photo {
 		max-width: 800px;
+		// overflow: hidden;
 	}
 
 	.slider-photo {
 		position: relative;
-		// clip-path: inset(-100vw -100vw -100vw 0);
+		clip-path: inset(-100vw -100vw -100vw 0);
 
 		.swiper {
 			overflow: visible;

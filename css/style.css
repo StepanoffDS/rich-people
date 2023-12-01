@@ -1869,6 +1869,8 @@ a {
 }
 .problem-solving .slider-photo {
   position: relative;
+  -webkit-clip-path: inset(-100vw -100vw -100vw 0);
+          clip-path: inset(-100vw -100vw -100vw 0);
 }
 .problem-solving .slider-photo .swiper {
   overflow: visible;
