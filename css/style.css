@@ -370,6 +370,11 @@ template {
   }
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 h1,
 h2,
 h3,
@@ -585,7 +590,7 @@ a {
   display: none;
   position: absolute;
   left: -100px;
-  padding-top: 15px;
+  padding-top: 30px;
 }
 .header__dropdown-menu-inner {
   padding: 20px 30px;
@@ -762,6 +767,9 @@ a {
   .header__number {
     font-size: 14px;
   }
+  .header__logo {
+    width: 136px;
+  }
 }
 
 .burger-menu {
@@ -772,7 +780,7 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-width: 375px;
 }
 .burger-menu__wrapper {
@@ -818,6 +826,13 @@ a {
   display: none;
   padding-top: 10px;
   line-height: 1.6;
+  position: relative;
+}
+.burger-menu__dropdown-menu-link {
+  margin-left: -40px;
+}
+.burger-menu__dropdown-menu-link.sublink {
+  margin-left: -20px;
 }
 .burger-menu__number {
   display: inline-block;
@@ -832,10 +847,11 @@ a {
 
 .detective-agency {
   background: url("../img/bg-detective-agency.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  height: 1140px;
 }
 .detective-agency::after {
   content: "";
@@ -844,12 +860,17 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 212, 255, 0) 30%);
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 212, 255, 0) 10%);
   background-position: bottom;
 }
 .detective-agency__wrapper {
   position: relative;
   z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 .detective-agency__messengers {
   margin-left: auto;
@@ -880,6 +901,9 @@ a {
   font-size: 20px;
   margin-top: 30px;
 }
+.detective-agency__subtitle br {
+  display: none;
+}
 .detective-agency__btn {
   margin-left: 200px;
   margin-top: 132px;
@@ -895,8 +919,16 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .detective-agency {
+    height: auto;
+  }
   .detective-agency__wrapper {
+    flex-direction: row;
     padding: 80px 20px 60px;
+  }
+  .detective-agency__content {
+    order: -1;
+    align-self: end;
   }
   .detective-agency__number-page {
     margin-top: 484px;
@@ -923,8 +955,11 @@ a {
     margin-bottom: 22px;
   }
   .detective-agency__subtitle {
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 8px;
+  }
+  .detective-agency__subtitle br {
+    display: inline;
   }
   .detective-agency__title-h1 {
     font-size: 28px;
@@ -946,7 +981,10 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 212, 255, 0) 50%);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 212, 255, 0) 10%);
+}
+.agency-services .indentation {
+  padding-top: 200px;
 }
 .agency-services__wrapper {
   position: relative;
@@ -967,6 +1005,9 @@ a {
 .agency-services__content {
   display: flex;
   justify-content: space-between;
+}
+.agency-services__btn br {
+  display: none;
 }
 .agency-services__btn_active {
   color: #EBD39B;
@@ -1005,6 +1046,10 @@ a {
   padding: 44px 10px 16px 36px;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.2s ease-in;
+}
+.agency-services__table-cell:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 .agency-services__table-cell-icon {
   flex: 0 0 auto;
@@ -1047,11 +1092,15 @@ a {
     display: flex;
     justify-content: center;
   }
+  .agency-services__btn br {
+    display: inline;
+  }
   .agency-services__btn-all-services {
     margin: 50px auto 0;
   }
   .agency-services__btn_service-for-individuals {
     margin-right: 50px;
+    padding: 0 5%;
   }
   .agency-services__table-cell-icon {
     margin-bottom: 60px;
@@ -1406,8 +1455,10 @@ a {
   font: 128px "Montserrat-Bold";
   margin-bottom: 28px;
 }
-.primary-cost__btn {
-  margin-left: auto;
+.primary-cost__btns-area {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 @media (max-width: 768px) {
   .primary-cost__title {
@@ -1432,6 +1483,13 @@ a {
   .primary-cost__price {
     font-size: 68px;
     margin-bottom: 16px;
+  }
+  .primary-cost__btns-area {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .primary-cost__btn {
+    width: 80%;
   }
 }
 
@@ -1637,14 +1695,50 @@ a {
   max-width: 140px;
 }
 .application-form__btn-submit-form {
+  padding: 20px 126px 20px 20px;
+  text-align: left;
+  transition: color 0.2s ease-in, background-color 0.2s ease-in;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  background-color: #EBD39B;
+  position: relative;
+  border: 1px solid #EBD39B;
+  color: #4E4636;
+  font-family: "Montserrat-SemiBold";
+  font-size: 14px;
+  border-radius: 7px;
+}
+.application-form__btn-submit-form:hover {
   background-color: transparent;
-  border: 0;
-  background-image: url("../img/submit-btn-icon.svg");
-  background-size: 100%;
-  font-size: 0;
+  color: #EBD39B;
+}
+.application-form__btn-submit-form svg {
+  color: #4E4636;
+  transition: color 0.2s ease-in;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+}
+@media (max-width: 768px) {
+  .application-form__btn-submit-form {
+    font-size: 12.5px;
+    padding: 17px 104px 17px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .application-form__btn-submit-form {
+    font-size: 11px;
+    padding: 15px 104px 15px 20px;
+    width: 70% !important;
+    background-image: none !important;
+  }
+  .application-form__btn-submit-form svg {
+    width: 18px;
+  }
+}
+.application-form__btn-submit-form:hover svg {
+  color: #EBD39B;
 }
 @media (max-width: 1418px) {
   .application-form__column-item {
@@ -1715,14 +1809,6 @@ a {
   }
   .application-form__input-file {
     margin-bottom: 28px;
-  }
-  .application-form__btn-submit-form {
-    width: 284px;
-    height: 52px;
-    border-radius: 7px;
-    background: url("../img/submit-arrow.svg") 241px/24px 24px no-repeat;
-    background-color: #E7CE95;
-    font: 14px "Montserrat-SemiBold";
   }
 }
 
@@ -2216,6 +2302,11 @@ a {
   border-radius: 50%;
   background-color: #2C2C2C;
 }
+.footer__messengers-icon a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer__messengers-icon-inner {
   position: relative;
   right: 2px;
@@ -2485,6 +2576,10 @@ a {
 .banner__number {
   font-size: 29px;
   font-family: "Montserrat-SemiBold";
+  transition: color 0.2s ease-in;
+}
+.banner__number:hover {
+  color: #EBD39B;
 }
 .banner__btn {
   flex: 0 0 auto;
@@ -3400,7 +3495,8 @@ a {
 .service-list__table-cell-title {
   font: 35px "MontserratAlternates-Light";
   line-height: 45px;
-  height: 90px;
+  min-height: 90px;
+  margin-bottom: 30px;
 }
 .service-list__table-cell-content {
   font-family: "Montserrat-Medium";
@@ -3414,8 +3510,8 @@ a {
   .service-list__table-cell-title {
     font-size: 25.5px;
     line-height: 1.3;
-    height: auto;
-    margin-bottom: 2em;
+    min-height: auto;
+    margin-bottom: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -3455,9 +3551,14 @@ a {
   opacity: 60%;
   font-weight: 500;
   padding: 0 5px;
+  transition: color 0.2s ease-in, opacity 0.2s ease-in;
 }
 .cards__column_last {
   margin-left: 40px;
+}
+.cards__column:hover {
+  color: #DCBA70;
+  opacity: 1;
 }
 @media (max-width: 480px) {
   .cards__row {
@@ -4375,7 +4476,7 @@ a {
 .section-contacts__titles {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-bottom: 12px;
 }
 .section-contacts__titles-icon {
@@ -4413,6 +4514,11 @@ a {
 .section-contacts__btn {
   flex: 0 0 auto;
   margin: 0 auto;
+}
+@media (max-width: 1362px) {
+  .section-contacts__titles {
+    justify-content: center;
+  }
 }
 @media (max-width: 768px) {
   .section-contacts__titles {
@@ -4700,7 +4806,7 @@ a {
   line-height: 28px;
   /* 200% */
   text-transform: uppercase;
-  padding: 16px 35px;
+  padding: 14px 35px;
   border: 1px solid #E7CE95;
   cursor: pointer;
 }
@@ -4708,8 +4814,22 @@ a {
   background-color: transparent;
   color: #E7CE95;
 }
+@media (max-width: 1279px) {
+  .agency-details__btn-close {
+    padding: 10px 35px;
+    width: 240px;
+  }
+}
+@media (max-width: 768px) {
+  .agency-details__btn-close {
+    font-size: 12.5px;
+  }
+}
 @media (max-width: 480px) {
   .agency-details__title {
     margin-left: auto;
+  }
+  .agency-details__btn-close {
+    font-size: 11px;
   }
 }/*# sourceMappingURL=style.css.map */
