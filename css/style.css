@@ -816,6 +816,9 @@ a {
 .burger-menu__menu-item:hover .burger-menu__dropdown-menu-items {
   display: block;
 }
+.burger-menu__menu-item span {
+  pointer-events: none;
+}
 .burger-menu__drop-btn-icon {
   position: relative;
   top: -3px;

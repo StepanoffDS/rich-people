@@ -568,6 +568,10 @@ a {
 				display: block;
 			}
 		}
+
+		span {
+			pointer-events: none;
+		}
 	}
 
 	&__drop-btn-icon {
