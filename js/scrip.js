@@ -104,6 +104,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
 		});
 	} catch (error) { }
 
+	try {
+		const menuItems = document.querySelectorAll('.burger-menu__menu-item')
+		menuItems.forEach(e => {
+			e.addEventListener('click', () => {
+				e.classList.toggle('show')
+			})
+		})
+	} catch (error) { }
+
 	// try {
 	//   const dropBurgerBtn = document.querySelectorAll(".burger-menu__drop-btn");
 	//   const dropMenu = document.querySelectorAll(".burger-menu__dropdown-menu-items");
@@ -271,18 +280,23 @@ window.addEventListener("DOMContentLoaded", (event) => {
 	}
 });
 
-const btnInfoAgency = document.querySelector('.detective-blog__btns-btn--js')
-const btnCloseInfoAgency = document.querySelector('.agency-details__btn-close--js')
 
-btnInfoAgency.addEventListener('click', () => {
-	const $infoAgencySection = document.querySelector('.agency-details')
-	$infoAgencySection.classList.toggle('active')
-})
 
-btnCloseInfoAgency.addEventListener('click', () => {
-	const $infoAgencySection = document.querySelector('.agency-details')
-	$infoAgencySection.classList.toggle('active')
-})
+try {
+	const btnInfoAgency = document.querySelector('.detective-blog__btns-btn--js')
+	const btnCloseInfoAgency = document.querySelector('.agency-details__btn-close--js')
+
+	btnInfoAgency.addEventListener('click', () => {
+		const $infoAgencySection = document.querySelector('.agency-details')
+		$infoAgencySection.classList.toggle('active')
+	})
+
+	btnCloseInfoAgency.addEventListener('click', () => {
+		const $infoAgencySection = document.querySelector('.agency-details')
+		$infoAgencySection.classList.toggle('active')
+	})
+
+} catch (err) { }
 
 try {
 	function initSwiper() {

@@ -551,7 +551,7 @@ a {
 	}
 
 	&__menu-item {
-		display: block;
+		display: flex;
 		// align-items: center;
 		padding-bottom: 20px;
 		font-size: 20px;
@@ -563,10 +563,8 @@ a {
 			padding-bottom: 0;
 		}
 
-		&:hover {
-			.burger-menu__dropdown-menu-items {
-				display: block;
-			}
+		&.show .burger-menu__dropdown-menu-items {
+			display: block;
 		}
 
 		span {
