@@ -803,7 +803,7 @@ a {
   margin-bottom: 100px;
 }
 .burger-menu__menu-item {
-  display: flex;
+  display: block;
   padding-bottom: 20px;
   font-size: 20px;
   font-style: normal;
