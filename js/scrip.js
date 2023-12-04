@@ -108,8 +108,27 @@ window.addEventListener("DOMContentLoaded", (event) => {
 		const menuItems = document.querySelectorAll('.burger-menu__menu-item')
 		menuItems.forEach(e => {
 			e.addEventListener('click', () => {
+				menuItems.forEach(e => {
+					e.classList.remove('show')
+				})
 				e.classList.toggle('show')
 			})
+		})
+	} catch (error) { }
+
+
+
+	try {
+		const textarea = document.querySelector('.popup-form__input_textarea--js')
+		textarea.addEventListener('keyup', e => {
+			let scHeight = e.target.scrollHeight
+			// textarea.style.height = '40px'
+			textarea.style.height = `${scHeight}px`
+			console.log(textarea.value.length)
+
+			if (textarea.value.length === 0) {
+				textarea.style.height = '50px'
+			}
 		})
 	} catch (error) { }
 
