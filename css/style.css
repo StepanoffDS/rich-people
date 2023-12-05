@@ -6,8 +6,10 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 html {
-  line-height: 1.15; /* 1 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
 /* Sections
@@ -42,9 +44,12 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /**
@@ -52,8 +57,10 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /* Text-level semantics
@@ -70,10 +77,13 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+          text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
@@ -91,8 +101,10 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
 }
 
 /**
@@ -142,10 +154,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
 }
 
 /**
@@ -153,7 +169,8 @@ textarea {
  * 1. Show the overflow in Edge.
  */
 button,
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -162,7 +179,8 @@ input { /* 1 */
  * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -211,12 +229,18 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
@@ -239,8 +263,10 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
 }
 
 /**
@@ -256,8 +282,10 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
 }
 
 /**
@@ -272,8 +300,10 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
 }
 
 /* Interactive
@@ -306,6 +336,106 @@ template {
  */
 [hidden] {
   display: none;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  /* Browsers have different default form fonts */
+  font-size: 13px;
+}
+
+/* Remove the stupid outer glow in Webkit */
+input:focus {
+  outline: 0;
+}
+
+/* Box Sizing Reset
+-----------------------------------------------*/
+/* All of our custom controls should be what we expect them to be */
+input,
+textarea {
+  box-sizing: content-box;
+}
+
+/* These elements are usually rendered a certain way by the browser */
+button,
+input[type=reset],
+input[type=button],
+input[type=submit],
+input[type=checkbox],
+input[type=radio],
+select {
+  box-sizing: border-box;
+}
+
+/* Text Inputs
+-----------------------------------------------*/
+/* Button Controls
+-----------------------------------------------*/
+input[type=checkbox],
+input[type=radio] {
+  width: 13px;
+  height: 13px;
+}
+
+/* File Uploads
+-----------------------------------------------*/
+/* Search Input
+-----------------------------------------------*/
+/* Make webkit render the search input like a normal text field */
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration {
+  display: none;
+}
+
+/* Buttons
+-----------------------------------------------*/
+button,
+input[type=reset],
+input[type=button],
+input[type=submit] {
+  /* Fix IE7 display bug */
+  overflow: visible;
+  width: auto;
+}
+
+/* IE8 and FF freak out if this rule is within another selector */
+::-webkit-file-upload-button {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* Textarea
+-----------------------------------------------*/
+textarea {
+  /* Move the label to the top */
+  vertical-align: top;
+  /* Turn off scroll bars in IE unless needed */
+  overflow: auto;
+}
+
+/* Selects
+-----------------------------------------------*/
+select[multiple] {
+  /* Move the label to the top */
+  vertical-align: top;
 }
 
 @font-face {
@@ -370,6 +500,10 @@ template {
   }
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 input,
 textarea {
   outline: none;
@@ -409,7 +543,7 @@ a {
 }
 
 .title-h1 {
-  font-size: clamp(3.438rem, 0.438rem + 2.5vw, 5.125rem);
+  font-size: 55px;
   font-weight: 400;
   font-family: "Montserrat-Light";
 }
@@ -930,6 +1064,7 @@ a {
   .detective-agency__wrapper {
     flex-direction: row;
     padding: 80px 20px 10px;
+    height: 100svh;
   }
   .detective-agency__content {
     order: -1;
@@ -967,7 +1102,7 @@ a {
     display: inline;
   }
   .detective-agency__title-h1 {
-    font-size: 28px;
+    font-size: 25px;
     line-height: 1.55;
   }
   .detective-agency__btn {
@@ -1356,6 +1491,7 @@ a {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    margin-bottom: -4px;
   }
   .start-consultation-page__wrapper {
     padding-bottom: 0;
@@ -1629,7 +1765,7 @@ a {
   border-right: none;
   border-bottom: 2px #3F3F3F solid;
   width: 100%;
-  height: 30px;
+  height: 36px;
   color: white;
   font-size: 16px;
   font-family: "Montserrat-Regular";
@@ -1646,7 +1782,7 @@ a {
   padding-top: 0;
   padding-bottom: 15px;
   resize: none;
-  height: calc(100% - 25px);
+  height: calc(100% - 19px);
   box-sizing: border-box;
 }
 .application-form__input-placeholder {
@@ -1655,7 +1791,7 @@ a {
 }
 .application-form__input-placeholder_counter {
   position: absolute;
-  bottom: -20px;
+  bottom: -25px;
   right: 0;
   font-size: 12px;
   color: #B1B1B1;
@@ -1668,7 +1804,7 @@ a {
   color: #B5B6BA;
   font-size: 12px;
   margin-bottom: 30px;
-  margin-top: 28px;
+  margin-top: 35px;
 }
 .application-form__policy a {
   color: #B5B6BA;
@@ -2545,7 +2681,7 @@ a {
   justify-content: space-between;
   flex-direction: column;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 .banner__messengers {
   position: relative;
@@ -3527,10 +3663,15 @@ a {
   gap: 67px 75px;
 }
 .service-list__table-cell-title {
+  display: block;
   font: 35px "Montserrat-Light";
   line-height: 45px;
   min-height: 90px;
   margin-bottom: 30px;
+  transition: color 0.2s ease-in;
+}
+.service-list__table-cell-title:hover {
+  color: #EBD39B;
 }
 .service-list__table-cell-content {
   font-family: "Montserrat-Medium";
@@ -4679,7 +4820,7 @@ a {
   border-right: none;
   border-bottom: 2px #3F3F3F solid;
   width: 100%;
-  height: 50px;
+  height: 60px;
   color: white;
   font-size: 16px;
   font-family: "Montserrat-Regular";

@@ -202,6 +202,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 		openPopup.forEach((btn) => {
 			btn.addEventListener("click", function () {
 				popUp.classList.add("active");
+				document.body.classList.add('overflow-hidden')
 				let btnText = btn.innerText;
 				btnText = btnText[0].toUpperCase() + btnText.slice(1).toLowerCase();
 
@@ -212,6 +213,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 		closePopup.addEventListener("click", function () {
 			popUp.classList.remove("active");
+			document.body.classList.remove('overflow-hidden')
 		});
 
 	} catch (err) { }
