@@ -1614,6 +1614,9 @@ a {
     font-size: 98px;
     margin-bottom: 22px;
   }
+  .primary-cost__btns-area {
+    justify-content: flex-start;
+  }
   .primary-cost__btn {
     margin-left: 0;
   }
@@ -1621,7 +1624,6 @@ a {
 @media (max-width: 480px) {
   .primary-cost__title {
     font-size: 18px;
-    margin-bottom: 12px;
     line-height: 1.5;
   }
   .primary-cost__price {
@@ -1629,8 +1631,8 @@ a {
     margin-bottom: 16px;
   }
   .primary-cost__btns-area {
-    flex-direction: column;
-    gap: 30px;
+    justify-content: space-between;
+    gap: 20px;
   }
   .primary-cost__btn {
     width: 80%;
@@ -3322,6 +3324,8 @@ a {
   }
   .price-table__btns {
     margin: 0 0 40px 0;
+    display: flex;
+    gap: 40px;
   }
 }
 @media (max-width: 1199px) {
@@ -3333,6 +3337,9 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .price-table__btns {
+    gap: 40px;
+  }
   .price-table__table-row-title {
     font-size: 12px;
   }
@@ -3347,11 +3354,21 @@ a {
   }
 }
 @media (max-width: 480px) {
-  .price-table__table-row-title {
-    font-size: 10px;
+  .price-table__btns {
+    gap: 20px;
+    width: 100%;
   }
-  .price-table__table-row {
-    font-size: 10px;
+  .price-table__btn {
+    width: 100%;
+    margin: 0;
+  }
+  .price-table__btn-item {
+    width: 100%;
+    justify-content: center;
+    padding-left: 0;
+  }
+  .price-table__table {
+    padding: 18px 10px;
   }
   .price-table__menu-categoty {
     font-size: 16px;
@@ -3912,7 +3929,7 @@ a {
     margin-bottom: 20px;
   }
   .subgroups-section3__row {
-    margin-bottom: 30px;
+    margin-bottom: 90px;
   }
 }
 @media (max-width: 480px) {
@@ -4250,7 +4267,7 @@ a {
   font-family: "Montserrat-SemiBold";
 }
 .time-is-money-section__subtitle-text {
-  font-weight: 600;
+  font-weight: 400;
 }
 @media (max-width: 1199px) {
   .time-is-money-section__title {

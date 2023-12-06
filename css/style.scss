@@ -1413,6 +1413,10 @@ a {
 			margin-bottom: 22px;
 		}
 
+		&__btns-area {
+			justify-content: flex-start;
+		}
+
 		&__btn {
 			margin-left: 0;
 		}
@@ -1421,7 +1425,6 @@ a {
 	@media (max-width: 480px) {
 		&__title {
 			font-size: 18px;
-			margin-bottom: 12px;
 			line-height: 1.5;
 		}
 
@@ -1431,8 +1434,9 @@ a {
 		}
 
 		&__btns-area {
-			flex-direction: column;
-			gap: 30px;
+			// flex-direction: column;
+			justify-content: space-between;
+			gap: 20px;
 		}
 
 		&__btn {
@@ -3653,6 +3657,8 @@ a {
 
 		&__btns {
 			margin: 0 0 40px 0;
+			display: flex;
+			gap: 40px;
 		}
 	}
 
@@ -3667,6 +3673,10 @@ a {
 	}
 
 	@media (max-width: 768px) {
+		&__btns {
+			gap: 40px;
+		}
+
 		&__table-row-title {
 			font-size: 12px;
 		}
@@ -3685,13 +3695,29 @@ a {
 	}
 
 	@media (max-width: 480px) {
-		&__table-row-title {
-			font-size: 10px;
+		&__btns {
+			gap: 20px;
+			width: 100%;
 		}
 
-		&__table-row {
-			font-size: 10px;
+		&__btn {
+			width: 100%;
+			margin: 0;
 		}
+
+		&__btn-item {
+			width: 100%;
+			justify-content: center;
+			padding-left: 0;
+		}
+
+		&__table {
+			padding: 18px 10px;
+		}
+
+		&__table-row-title {}
+
+		&__table-row {}
 
 		&__menu-categoty {
 			font-size: 16px;
@@ -4417,7 +4443,7 @@ a {
 		}
 
 		&__row {
-			margin-bottom: 30px;
+			margin-bottom: 90px;
 		}
 	}
 
@@ -4842,7 +4868,7 @@ a {
 	}
 
 	&__subtitle-text {
-		font-weight: 600;
+		font-weight: 400;
 	}
 
 	@media (max-width: 1199px) {
