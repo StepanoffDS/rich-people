@@ -1625,7 +1625,7 @@ a {
   .primary-cost__title {
     font-size: 18px;
     line-height: 1.5;
-    font-family: "Montserrat";
+    font-family: "Montserrat-Regular";
   }
   .primary-cost__title:nth-child(1) {
     font-size: 19px;
