@@ -1426,11 +1426,22 @@ a {
 		&__title {
 			font-size: 18px;
 			line-height: 1.5;
+			font-family: 'Montserrat';
+
+			&:nth-child(1) {
+				font-size: 19px;
+				margin-bottom: 9px;
+			}
+
+			&:nth-child(3) {
+				font-size: 15px;
+				margin-bottom: 50px;
+			}
 		}
 
 		&__price {
 			font-size: 68px;
-			margin-bottom: 16px;
+			margin-bottom: 15px;
 		}
 
 		&__btns-area {
@@ -4388,11 +4399,23 @@ a {
 		}
 	}
 
+	&__menu-drop-btn {
+		display: none;
+	}
+
 	&__row-text {}
 
 	&__row-title {
 		font: 45px 'Montserrat-Light';
 		margin-bottom: 30px;
+
+		a {
+			transition: color 0.2s ease-in;
+
+			&:hover {
+				color: #EBD39B;
+			}
+		}
 	}
 
 	&__row-description {
@@ -4440,10 +4463,20 @@ a {
 		&__row-title {
 			font-size: 30px;
 			margin-bottom: 20px;
+
+			a {
+				display: flex;
+				align-items: center;
+			}
 		}
 
 		&__row {
 			margin-bottom: 90px;
+		}
+
+		&__menu-drop-btn {
+			display: flex;
+			margin-left: 10px;
 		}
 	}
 
@@ -5486,16 +5519,24 @@ a {
 	}
 
 	@media (max-width: 480px) {
+		&__contacts {
+			gap: 35px;
+		}
+
 		&__massage {
 			flex-wrap: wrap;
 		}
 
 		&__descrip {
-			font-size: 14px;
+			display: block;
+			text-align: center;
+			font-size: 20px;
 		}
 
 		&__descrip-social {
-			font-size: 14px;
+			display: block;
+			text-align: center;
+			font-size: 20px;
 		}
 	}
 }
