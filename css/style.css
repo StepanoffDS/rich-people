@@ -3242,8 +3242,8 @@ a {
   color: #6A6A6A;
 }
 .price-table__btn-item_active {
-  color: #EBD39B;
-  border: #EBD39B 1px solid;
+  background-color: #EBD39B;
+  color: #4E4636;
 }
 .price-table__btn-item:hover {
   background-color: #EBD39B;
@@ -3906,6 +3906,12 @@ a {
 }
 .subgroups-section3__row-title a:hover {
   color: #EBD39B;
+}
+@media (max-width: 464px) {
+  .subgroups-section3__row-title a span {
+    width: 62%;
+    min-width: 261px;
+  }
 }
 .subgroups-section3__row-description {
   line-height: 1.625;

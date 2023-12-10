@@ -3546,8 +3546,10 @@ a {
 		color: #6A6A6A;
 
 		&_active {
-			color: #EBD39B;
-			border: #EBD39B 1px solid;
+			// color: #EBD39B;
+			// border: #EBD39B 1px solid;
+			background-color: #EBD39B;
+			color: #4E4636;
 		}
 
 		&:hover {
@@ -4414,6 +4416,13 @@ a {
 
 			&:hover {
 				color: #EBD39B;
+			}
+
+			@media (max-width: 464px) {
+				span {
+					width: 62%;
+					min-width: 261px;
+				}
 			}
 		}
 	}
