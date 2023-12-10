@@ -3908,7 +3908,7 @@ a {
   color: #EBD39B;
 }
 @media (max-width: 464px) {
-  .subgroups-section3__row-title a span {
+  .subgroups-section3__row-title a > span {
     width: 62%;
     min-width: 261px;
   }
